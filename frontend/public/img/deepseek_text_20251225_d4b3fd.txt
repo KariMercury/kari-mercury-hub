@@ -1,0 +1,58 @@
+kinetech-platform/
+│
+├── 📄 README.md                          ← YOU ARE HERE
+├── 📄 .gitignore                         (Files to exclude from Git)
+│
+├── 📁 database/                          # ALL DATABASE FILES
+│   ├── 📄 01-schema.sql                  (Table creation scripts)
+│   ├── 📄 02-sample-data.sql             (Initial content inserts)
+│   ├── 📄 03-stored-procedures.sql       (Search/filter logic)
+│   └── 📄 database-diagram.png           (Visual DB structure)
+│
+├── 📁 src/                               # C# BACKEND CODE
+│   ├── 📁 Models/                        (C# class definitions)
+│   │   ├── 📄 ContentItem.cs
+│   │   ├── 📄 ContentTag.cs
+│   │   └── 📄 SearchResult.cs
+│   │
+│   ├── 📁 Services/                      (Business logic)
+│   │   ├── 📄 SearchEngineService.cs     (Core search algorithm)
+│   │   ├── 📄 ContentFilterService.cs    (Explicit/ethical filtering)
+│   │   └── 📄 RecommendationEngine.cs    ("People also viewed" logic)
+│   │
+│   ├── 📁 Controllers/                   (Web API endpoints)
+│   │   ├── 📄 SearchController.cs        (Handles search queries)
+│   │   ├── 📄 ContentController.cs       (Manages content CRUD)
+│   │   └── 📄 UserPreferencesController.cs
+│   │
+│   └── 📁 Data/                          (Database access layer)
+│       └── 📄 KinetechDbContext.cs
+│
+├── 📁 frontend/                          # USER INTERFACE
+│   ├── 📁 public/                        (Static assets)
+│   │   ├── 📁 images/
+│   │   │   ├── 📄 content-ratings.png    (Explicit content warnings)
+│   │   │   └── 📄 platform-flow.png      (User journey diagram)
+│   │   └── 📄 favicon.ico
+│   │
+│   ├── 📁 src/
+│   │   ├── 📁 components/
+│   │   │   ├── 📄 SearchBar.jsx          (Main search interface)
+│   │   │   ├── 📄 ResultCard.jsx         (Displays each content item)
+│   │   │   └── 📄 ContentFilter.jsx      (Explicit content toggle)
+│   │   └── 📄 App.js                     (Main application)
+│   │
+│   └── 📄 index.html                     (Entry point)
+│
+├── 📁 docs/                              # PROJECT DOCUMENTATION
+│   ├── 📄 CONTENT_TAGGING_GUIDE.md       (How to tag postpartum vs explicit)
+│   ├── 📄 ETHICAL_GUIDELINES.md          (Explicit content handling rules)
+│   ├── 📄 API_DOCUMENTATION.md           (How to use the search API)
+│   └── 📄 user-journey-maps/             (Visual flows for different users)
+│       ├── 📄 new-mother.png
+│       ├── 📄 sexual-wellness-seeker.png
+│       └── 📄 post-surgery-recovery.png
+│
+└── 📁 tests/                             # CODE TESTS
+    ├── 📄 SearchEngineTests.cs           (Tests search accuracy)
+    └── 📄 ContentFilterTests.cs          (Tests ethical filtering)
